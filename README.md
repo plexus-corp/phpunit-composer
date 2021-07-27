@@ -1,3 +1,3 @@
 # phpunit-composer
 
-A starting PHP docker image for running test suites
+A starting PHP docker image for running CakePHP test suites
