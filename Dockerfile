@@ -14,4 +14,5 @@ RUN apt-get update \
     unzip \
     && \
   docker-php-ext-install -j$(nproc) \
-    intl
+    intl \
+    pdo_sqlite
