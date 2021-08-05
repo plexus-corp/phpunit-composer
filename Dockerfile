@@ -8,6 +8,7 @@ COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 RUN apt-get update \
     && \
   DEBIAN_FRONTEND=noninteractive apt-get install -y \
+    default-mysql-client \
     libicu-dev \
     libsqlite3-dev \
     sqlite3 \
@@ -15,4 +16,5 @@ RUN apt-get update \
     && \
   docker-php-ext-install -j$(nproc) \
     intl \
+    pdo_mysql \
     pdo_sqlite
